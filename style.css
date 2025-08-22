@@ -72,12 +72,16 @@ body{
 
 @media (max-width:500px){
     .btn{
-        padding: 1em 2em;
-        font-size: 1.5rem;
+        padding: 0.3em 0.3em;
+        font-size: 1rem;
     }
     
     .p1{
-        font-size: 0.7rem;
+        font-size: 1rem;
+    }
+     #content{
+        border-radius: 5em;
+        width: 50%;
     }
 }
 
