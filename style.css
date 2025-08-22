@@ -74,14 +74,19 @@ body{
     .btn{
         padding: 0.3em 0.3em;
         font-size: 1rem;
+        border-radius: 0.2em;
     }
     
     .p1{
         font-size: 1rem;
     }
      #content{
-        border-radius: 5em;
-        width: 50%;
+        border-radius: 2em;
+        width: 80%;
+        height: 60%;
+    }
+    .video{
+        object-fit: cover;
     }
 }
 
