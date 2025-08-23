@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Для Сереженьки 💖</title>
+  <style>
+    body,html {
+      margin:0;
+      padding:0;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      background-image: url("img/fon.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .game {
+      background: #000;
+      border: 6px solid white;
+      border-radius: 25px;
+      width: 550px;
+      height: 500px;
+      padding: 10px 10px;
+      text-align: center;
+      color: white;
+    }
+
+    .character {
+      width: 70%;
+      height: 65%;
+      image-rendering: pixelated;
+      animation: bounce 0.35s infinite alternate;
+      position:relative;
+      left:20px;
+    }
+
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(6px); }
+    }
+
+    .dialogue {
+      font-size: 1.5rem;
+      background: #ee3f96;
+      border: 3px solid #fff;
+      padding: 10px;
+      border-radius: 200px;
+      display: inline-block;
+      width: 22%;
+      position: absolute;
+      top: 65%;
+      left:38.7%;
+      
+    }
+
+    .choices {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      position: absolute;
+      top: 30%;
+      left:19%;
+    }
+
+    .btn {
+      background: #ee3f96;
+      border: 3px soli;
+      border: 3px solid #fff;
+      border-radius: 10px;
+      color: white;
+      font-size: 2rem;
+      padding: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+      width: auto;
+      height: auto;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width:400px) {
+        .character{
+            width: 90px;
+        }
+        .dialogue{
+            font-size: 0.7rem;
+            padding: 6px;
+        }
+        .btn{
+            font-size: 0.7rem;
+            padding: 8px;
+        }
+    }
+  </style>
+</head>
+<body>
+  <div class="game">
+    <img id="character" class="character" src="img/normal.jpg">
+    <div id="dialogue" class="dialogue">Привет милый ❤️🍓❤️</div>
+    <div id="choices" class="choices">
+      <button class="btn" id="btn1">Хочешь тортик?</button>
+      <button class="btn" id="btn2">Хочешь подарочек?</button>
+      <button class="btn" id="btn4">...</button>
+    </div>
+  </div>
+
+  <script>
+    const character = document.getElementById("character");
+    const dialogue = document.getElementById("dialogue");
+    const choices = document.getElementById("choices");
+
+    const btn1 = document.getElementById("btn1");
+    const btn2 = document.getElementById("btn2");
+    const btn4 = document.getElementById("btn4");
+
+    // dynamic new buttons
+    const btn3 = document.createElement("button");
+    btn3.className = "btn hidden";
+    btn3.innerText = "Что в коробке?";
+    choices.appendChild(btn3);
+
+    const btn5 = document.createElement("button");
+    btn5.className = "btn hidden";
+    btn5.innerText = "конечно))";
+    choices.appendChild(btn5);
+
+    const btn6 = document.createElement("button");
+    btn6.className = "btn hidden";
+    btn6.innerText = "дай-ка подумать";
+    choices.appendChild(btn6);
+
+    const btn7 = document.createElement("button");
+    btn7.className = "btn hidden";
+    btn7.innerText = "ДА";
+    choices.appendChild(btn7);
+
+    const btn8 = document.createElement("button");
+    btn8.className = "btn hidden";
+    btn8.innerText = "НЕТ ";
+    choices.appendChild(btn8);
+
+    // --- Game flow ---
+    btn1.addEventListener("click", () => {
+      character.src = "img/cake.jpg";
+      dialogue.textContent = "Загадывай желание))";
+    });
+
+    btn2.addEventListener("click", () => {
+      character.src = "img/gift.jpg";
+      dialogue.textContent = "Это тебе любимый";
+      setTimeout(() => {
+        btn3.classList.remove("hidden");
+      }, 0.800);
+    });
+
+    btn3.addEventListener("click", () => {
+      character.src = "img/gift1.jpg";
+      dialogue.textContent = "Ответ в твоём шк шкафчике";
+      btn3.classList.add("hidden");
+    });
+    btn4.addEventListener("click", () => {
+      dialogue.textContent = "Я тебя люблю ❤️ а ты?";
+      character.src = "img/heart.jpg";
+      btn5.classList.remove("hidden");
+      btn6.classList.remove("hidden");
+      btn1.classList.add("hidden");
+      btn2.classList.add("hidden");
+      btn4.classList.add("hidden");
+    });
+
+    btn5.addEventListener("click", () => {
+      character.src = "img/da-tı.jpg";
+      dialogue.textContent = "Да ты мой хороший <3";
+      btn5.classList.add("hidden");
+      btn6.classList.add("hidden");
+    });
+
+    btn6.addEventListener("click", () => {
+      dialogue.textContent = "Вы проиграли( Хотите попробовать снова?";
+      character.src = "img/broken.jpg";
+      btn5.classList.add("hidden");
+      btn6.classList.add("hidden");
+      btn7.classList.remove("hidden");
+      btn8.classList.remove("hidden");
+    });
+
+    btn7.addEventListener("click", () => {
+      character.src = "img/normal.jpg";
+      dialogue.textContent = "Привет ешё раз <3";
+      btn7.classList.add("hidden");
+      btn8.classList.add("hidden");
+      btn1.classList.remove("hidden");
+      btn2.classList.remove("hidden");
+      btn4.classList.remove("hidden");
+    });
+  </script>
+</body>
+</html>
