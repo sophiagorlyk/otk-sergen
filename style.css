@@ -1,11 +1,15 @@
-body{
+body,html{
     height: 100%;
     margin: 0;
+    padding:0;
+    overflow: hidden;
 }
 .video{
     object-fit: cover;
     z-index: -1;
     position: fixed;
+    top:0;
+    left:0;
     width: 100%;
     height: 100%;
     
@@ -17,9 +21,9 @@ body{
     border-radius:45px;
     z-index:1;
     position:fixed;
-    top:20%;
-    left:35%;
-    transform: translate(-50,-50);
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
     width:30%;
     box-sizing: border-box;
     display:flex;
@@ -72,21 +76,20 @@ body{
 
 @media (max-width:500px){
     .btn{
-        padding: 0.3em 0.3em;
+        padding: 0.5em 1em;
         font-size: 1rem;
         border-radius: 0.2em;
     }
     
     .p1{
         font-size: 1rem;
+        padding-bottom: 2em;
     }
      #content{
-        border-radius: 2em;
+        border-radius: 20px;
         width: 80%;
-        padding: 2em;
-    }
-    .video{
-        object-fit: cover;
+        padding: 1.5em;
+        font-size: 1rem;
     }
 }
 
