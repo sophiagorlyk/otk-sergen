@@ -77,10 +77,18 @@ body,html{
         overflow-y: auto;
         overflow-x:hidden;
     }
-    .cake1, .cake2, .ul{
-        position:absolute;
-        margin-top:1em;
+    .bottom{
+        display:flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-top: 3em;
+        padding:0 1em;
     }
+    .cake1, .cake2{
+        width:20%;
+        height: auto;
+    }
+
     .cake1{
         padding:1em 1em;  
         width: 20%;
@@ -104,17 +112,20 @@ body,html{
     }
     #content{
         width:90%;
-        height:65%;
+        height:auto;
         border-radius: 10px;
         align-items: center;
         justify-items: center;
         justify-self: center;
         margin: 1em auto;
-        padding: 20% 20%;
+        position: relative;
+        top:50%;
+        left:50%;
         transform: translate(-50%, -50%);
+        padding:1em;
     }
     .ul-h1{
-        font-size: 0.45;
+        font-size: 0.9;
     }
     .p{
         font-size: 1.4rem;
@@ -123,8 +134,7 @@ body,html{
         left: 40%;
     }
     .img{
-        position: absolute;
-        top:150%;
-        left:30%;
+        width:40%;
+        height: auto;
     }
 }
