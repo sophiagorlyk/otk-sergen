@@ -35,6 +35,7 @@ body,html{
     margin: 0;
     text-align: justify;
     display: block;
+    font-size: 1.5rem;
 }
 .cake1{
     position: absolute;
@@ -61,7 +62,7 @@ body,html{
     font-size: 3rem;
     position: absolute;
     top:7%;
-    left: 55%;
+    left: 53%;
     color:rgb(255, 255, 255);
     text-shadow: 
         0 0 5px #0084FF,
@@ -85,40 +86,45 @@ body,html{
         width: 20%;
         height: 105;
         position: absolute;
-        top:5%;
+        top:145%;
         left:5%;
         
     }
     .cake2{
         position: absolute;
-        top:70%;
+        top:165%;
         left:75%;
         padding:1em 1em;
-        width: 25%;
+        width: 30%;
         height: 20%;
     }
     .ul{
         font-size: 0.7rem;
-        display: inline-block;
+        justify-self: center;
     }
     #content{
-        width:75%;
+        width:90%;
         height:65%;
         border-radius: 10px;
         align-items: center;
         justify-items: center;
         justify-self: center;
         margin: 1em auto;
-        display: inline;
         padding: 20% 20%;
+        transform: translate(-50%, -50%);
     }
     .ul-h1{
         font-size: 0.45;
     }
     .p{
-        font-size: 1rem;
+        font-size: 1.4rem;
         position: absolute;
-        top:5%;
+        top:145%;
         left: 40%;
+    }
+    .img{
+        position: absolute;
+        top:150%;
+        left:30%;
     }
 }
