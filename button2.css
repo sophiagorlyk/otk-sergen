@@ -85,7 +85,7 @@ body,html{
         width: 20%;
         height: 105;
         position: absolute;
-        top:20%;
+        top:5%;
         left:5%;
         
     }
@@ -94,11 +94,10 @@ body,html{
         top:70%;
         left:75%;
         padding:1em 1em;
-        width: 15%;
-        height: 10%;
+        width: 25%;
+        height: 20%;
     }
     .ul{
-        top:5%;
         font-size: 0.7rem;
         display: inline-block;
     }
@@ -107,11 +106,19 @@ body,html{
         height:65%;
         border-radius: 10px;
         align-items: center;
+        justify-items: center;
+        justify-self: center;
         margin: 1em auto;
         display: inline;
+        padding: 20% 20%;
+    }
+    .ul-h1{
+        font-size: 0.45;
+    }
+    .p{
+        font-size: 1rem;
         position: absolute;
         top:5%;
-        left:15%;
+        left: 40%;
     }
-   
 }
