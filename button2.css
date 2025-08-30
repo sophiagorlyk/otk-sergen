@@ -88,41 +88,31 @@ body,html{
         height: auto;
     }
 
-    .cake1{
-        padding:1em 1em;  
-        width: 20%;
-        height: 105;
-        
-    }
-    .cake2{
-        padding:1em 1em;
-        width: 30%;
-        height: 20%;
+    .cake1, .cake2{
+        display:none;
     }
     .ul{
         font-size: 0.7rem;
     }
     #content{
-        width:90%;
         height:auto;
         border-radius: 10px;
         align-items: center;
         justify-items: center;
         margin: 1em auto;
-        position: relative;
-        top:250%;
-        left:30%;
-        transform: translate(-50%, -50%);
-        padding:1em;
+        transform: translate(-50%, -50%); 
+        position:fixed;
+        top:50%;
+        left:50%;
+        align-items: center;
+        width: 80%;
+        padding: 1.5em;
+
     }
     .ul-h1{
         font-size: 0.6;
     }
-    .p{
-        font-size: 1.4rem;
-    }
-    .img{
-        width:40%;
-        height: auto;
-    }
-}
+    .img, .p{
+        display: none;
+    
+}}
