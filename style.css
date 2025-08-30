@@ -64,9 +64,7 @@ body,html{
 #button1{
     background:-webkit-linear-gradient(135deg,#fd66ac, #7cf8e5,  #ae4fca );
 }
-#button2{
-    background: -webkit-linear-gradient(135deg, #FFDD73, #FF73A9, #4C54A6);
-}
+
 .button-container{
     display:flex;
     gap: 15px;
@@ -90,9 +88,5 @@ body,html{
         width: 80%;
         padding: 1.5em;
         font-size: 1rem;
-    }
-    #button2{
-        display: none;
-    }
-}
+    }}
 
