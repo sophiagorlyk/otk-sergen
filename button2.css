@@ -79,7 +79,6 @@ body,html{
     }
     .bottom{
         display:flex;
-        justify-content: space-between;
         align-items: flex-end;
         margin-top: 3em;
         padding:0 1em;
@@ -93,22 +92,15 @@ body,html{
         padding:1em 1em;  
         width: 20%;
         height: 105;
-        position: absolute;
-        top:145%;
-        left:5%;
         
     }
     .cake2{
-        position: absolute;
-        top:165%;
-        left:75%;
         padding:1em 1em;
         width: 30%;
         height: 20%;
     }
     .ul{
         font-size: 0.7rem;
-        justify-self: center;
     }
     #content{
         width:90%;
@@ -116,22 +108,18 @@ body,html{
         border-radius: 10px;
         align-items: center;
         justify-items: center;
-        justify-self: center;
         margin: 1em auto;
         position: relative;
-        top:50%;
-        left:50%;
+        top:250%;
+        left:30%;
         transform: translate(-50%, -50%);
         padding:1em;
     }
     .ul-h1{
-        font-size: 0.9;
+        font-size: 0.6;
     }
     .p{
         font-size: 1.4rem;
-        position: absolute;
-        top:145%;
-        left: 40%;
     }
     .img{
         width:40%;
