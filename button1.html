@@ -87,7 +87,7 @@
 
     @media (max-width:400px) {
         .character{
-            width: 80%;
+            width: 85%;
             height: 55%;
         }
         .game{
@@ -171,14 +171,20 @@
       setTimeout(() => {
         btn3.classList.remove("hidden");
       }, 0.800);
+      btn2.classList.add("hidden");
+      btn1.classList.add("hidden");
+      btn4.classList.add("hidden");
     });
 
     btn3.addEventListener("click", () => {
       character.src = "img/gift1.jpg";
-      dialogue.textContent = "Ответ в твоём шк шкафчике";
+      dialogue.textContent = "секрет))";
       btn3.classList.add("hidden");
       btn5.classlist.add("hidden");
       btn6.classlist.add("hidden");
+      btn1.classList.remove("hidden");
+      btn2.classList.remove("hidden");
+      btn4.classList.remove("hidden");
     });
     btn4.addEventListener("click", () => {
       dialogue.textContent = "Я тебя люблю ❤️ а ты?";
